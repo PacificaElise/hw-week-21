@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="login" name="form" id="formElem" novalidate>
+      <h1>Log in</h1>
+      <div class="login__inputs">
+        <label for="firstName"
+          ><input type="text" id="firstName" placeholder="First Name*" required
+        /></label>
+        <label for="lastName"
+          ><input type="text" id="lastName" placeholder="Last Name"
+        /></label>
+        <label type="text" for="city"
+          ><input id="city" placeholder="City"
+        /></label>
+        <label type="email" for="email"
+          ><input
+            id="email"
+            placeholder="Email*"
+            pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+            required
+        /></label>
+        <label for="password">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password*"
+            required
+          />
+        </label>
+      </div>
+      <label for="checkbox"><input type="checkbox" id="checkbox" /></label>
+      <span>Remember me</span>
+      <a href="#">Forgot password?</a>
+      <div id="errorMessage"></div>
+      <div id="errorPassword"></div>
+      <button type="submit" class="login__btn" onclick="checkAll()">
+        log in
+      </button>
+      <div class="reguired">* required to fill in</div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

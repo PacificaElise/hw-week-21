@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Опросник</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="littlepets.png" width="150" height="150" alt="logo" />
+    </header>
+    <form name="input" action="#" method="post">
+      <h3>Добро пожаловать!</h3>
+      <div>
+        Ответьте, пожалуйста, на несколько вопросов. Это не займёт много
+        времени.
+      </div>
+      <br />
+      <div>
+        <label for="name">Кличка питомца</label>
+        <input type="text" id="name" placeholder="Укажите имя пушистика:)" />
+      </div>
+      <br />
+      <div>
+        <label for="fio">Имя владельца*</label>
+        <input type="text" id="fio" required />
+      </div>
+      <br />
+      <div>
+        <fieldset>
+          <legend>Ваши контактные данные</legend>
+          <label for="phone">Номер мобильного телефона*</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="+375"
+            minlength="13"
+            required
+          />
+          <p>Адрес:</p>
+          <label for="city">Город</label>
+          <input type="text" id="city" />
+          <label for="street">Улица</label>
+          <input type="text" id="street" />
+          <label for="house">Номер дома</label>
+          <input type="tel" id="house" />
+          <label for="flat">Номер квартиры</label>
+          <input type="tel" id="flat" /> <br />
+          <br />
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Ваш электронный адрес" />
+        </fieldset>
+      </div>
+      <br />
+      <div>
+        <label for="breed"><i>Порода питомца*</i></label>
+        <select id="breed" required>
+          <option></option>
+          <option value="Мейн-Кун">Мейн-Кун</option>
+          <option value="Сиамская">Сиамская</option>
+          <option value="Британская короткошерстная">
+            Британская короткошерстная
+          </option>
+          <option value="Абиссинская">Абиссинская</option>
+          <option value="Персидская">Персидская</option>
+          <option value="Манчкин">Манчкин</option>
+          <option value="Донской сфинкс">Донской сфинкс</option>
+          <option value="Девон рекс">Девон рекс</option>
+          <option value="Бенгальская">Бенгальская</option>
+          <option value="Русская голубая">Русская голубая</option>
+        </select>
+      </div>
+      <br />
+      <div class="checkbox-group">
+        <label for="food">Чем питается ваш питомец?*</label>
+        <input type="checkbox" class="feed" id="food" value="Сухой корм" />Сухой
+        корм
+
+        <input
+          type="checkbox"
+          class="feed"
+          name="food2"
+          id="food2"
+          value="Влажный
+        корм"
+        />Влажный корм
+        <input
+          type="checkbox"
+          class="feed"
+          name="food3"
+          id="food3"
+          value="Натуральный корм"
+        />Натуральный корм
+      </div>
+      <div>
+        <br />
+        <label for="sex">Укажите пол питомца</label>
+        <input type="radio" class="sex" id="sex" value="Самец" />Самец
+        <label for="sex2"></label>
+        <input type="radio" class="sex" id="sex2" value="Самка" />Самка
+      </div>
+      <br />
+      <div>
+        <textarea name="comments" cols="50" rows="10" id="comments">
+Оставьте ваш комментарий</textarea
+        >
+      </div>
+      <br />
+      <div>
+        <label for="photo">Добавьте фото питомца</label>
+        <input type="file" id="photo" />
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="Сохранить" class="submit-button" />
+      </div>
+    </form>
+    <br />
+    <div><b>* Поле обязательно для заполнения</b></div>
+    <br />
+    <script src="script.js"></script>
+  </body>
+</html>
