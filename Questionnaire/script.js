@@ -28,9 +28,8 @@ let submitButton = document.querySelector(".submit-button");
                 } 
         }
 
-        let file;
-        document.getElementById("photo").addEventListener('change', (e) =>
-        file = e.target.files[0]);
+        let photo = document.getElementById("photo");
+        file = photo.files[0];
         
 
         let data = new FormData();

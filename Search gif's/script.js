@@ -40,16 +40,16 @@ class Search {
     console.log(res);
     container.innerHTML = "";
     this.view.searchError = "";
-
-    if (res.data[0].images.downsized.url===undefined) {
-      this.view.searchError.innerText = "Ничего не найдено :( Попробуйте ещё раз";
-    } else {
+    {
         for (let data of res.data) {
         let img = document.createElement('img');
         img.setAttribute('src', data.images.downsized.url);
         container.append(img);
       }
     }
+    /*if (res.data.lehgth===0) {
+      this.view.searchError.innerText = "Ничего не найдено :( Попробуйте ещё раз";
+    }*/
   }) 
   }
 
@@ -64,3 +64,5 @@ class Search {
   }
   
   new Search(new View());
+
+  

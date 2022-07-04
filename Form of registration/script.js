@@ -1,6 +1,6 @@
 let loginButton = document.querySelector(".login__btn");
 
-loginButton.onclick = function (e) {
+loginButton.addEventListener('click', (e) => {
             e.preventDefault();
 let user = {
     firstName: document.getElementById("firstName").value,
@@ -24,7 +24,7 @@ console.log(user);
                     console.log(user);
                 })
                 .catch(error => console.log(error));
-        }
+        });
 
         
         
